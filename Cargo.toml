@@ -1,0 +1,19 @@
+[package]
+name = "meradomo-engine"
+version = "0.1.0"
+edition = "2021"
+description = "Reusable launcher for a shared Meradomo engine: discover, attach, spawn, supervise, register, and publish. Tauri-agnostic — any host app drives it."
+license = "MIT"
+repository = "https://github.com/Meradomo/meradomo-engine"
+readme = "README.md"
+keywords = ["meradomo", "tunnel", "sharing", "sdk"]
+categories = ["network-programming"]
+
+[lib]
+name = "meradomo_engine"
+path = "src/lib.rs"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+reqwest = { version = "0.12", default-features = false, features = ["blocking", "json", "rustls-tls"] }
